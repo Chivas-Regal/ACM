@@ -8,7 +8,10 @@ https://acm.dingbacode.com/showproblem.php?pid=1384
 1. (b[i]) - (a[i] - 1) >= c[i]
 2. (d[i]) - (d[i - 1]) >= 0
 3. (d[i]) - (d[i - 1]) <= 1
-根据这三个条件建图，然后用“>=”求最长路即可
+
+根据这三个条件建图，然后用“>=”求最长路即可</br>
+因为会出现-1</br>
+所以使用Bellman-Ford优化</br>
 
 # <img src="https://img-blog.csdnimg.cn/20210712210334254.png" >
 
