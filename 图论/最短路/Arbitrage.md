@@ -1,3 +1,14 @@
+# 🔗
+https://acm.dingbacode.com/showproblem.php?pid=1217
+
+# 💡
+判断是否有负环</br>
+使用Bellman-Ford算法</br>
+松弛操作完之后判断还能不能松弛</br>
+朴素就能过
+
+# <img src="https://img-blog.csdnimg.cn/20210712210334254.png">
+```cpp
 /*
            ________   _                                              ________                              _
           /  ______| | |                                            |   __   |                            | |
@@ -130,3 +141,4 @@ CHIVAS_{
         }
         _REGAL;
 }
+```
