@@ -13,7 +13,7 @@ https://acm.dingbacode.com/showproblem.php?pid=1384
 因为会出现-1</br>
 所以使用Bellman-Ford优化</br>
 
-# <img src="https://img-blog.csdnimg.cn/20210712210334254.png" >
+# <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 
 ```cpp
 
