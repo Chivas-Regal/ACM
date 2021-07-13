@@ -7,7 +7,7 @@ https://acm.dingbacode.com/showproblem.php?pid=1217
 松弛操作完之后判断还能不能松弛</br>
 朴素就能过
 
-# <img src="https://img-blog.csdnimg.cn/20210712210334254.png">
+# <img src="https://img-blog.csdnimg.cn/20210713144601841.png">
 ```cpp
 /*
            ________   _                                              ________                              _
