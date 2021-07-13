@@ -15,7 +15,7 @@ y: a[i] - b[i] <= -c[i]</br>
 2.有负环，-2</br>
 3.不是1.2.就输出</br>
 
-# <img src="https://img-blog.csdnimg.cn/20210712210334254.png" >
+# <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 ```cpp
 /*
            ________   _                                              ________                              _
