@@ -12,4 +12,4 @@ The emoji "🔗" is for the link to the problem
 ## Thoughts
 The emoji "💡" is for the problem solving process
 ## Code
-The image "<img src="https://img-blog.csdnimg.cn/20210712210334254.png" >" is for the ACCEPT code to the problem 
+The image "<img src="https://img-blog.csdnimg.cn/20210713144601841.png" >" is for the ACCEPT code to the problem 
