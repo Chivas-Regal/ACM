@@ -126,8 +126,8 @@ inline ll Ex_crt(){
 
                 X += t * M;
                 M *= miDIVgcd;        //计算LCM
-                X = (X % M + M) % M;  //保持最小正整数解
-        }return X;
+                X = (X % M + M) % M;  //保持最小非负整数解
+        }return X == 0? M : X; //输出最小正整数
 }
 
 
