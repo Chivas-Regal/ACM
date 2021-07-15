@@ -119,7 +119,7 @@ inline ll Ex_crt(){
         ll X = a[1], M = m[1];//前一步的X，前一步的lcm
         for (ll i = 2, t, y; i <= n; i ++){
                 ll gcd = Ex_gcd(M, m[i], t, y), miDIVgcd = m[i] / gcd; // 求得gcd，并使m[i]约分一下好乘进M里面
-                ll c = (a[i] - X % m[i] + m[i]) % m[i];//ax≡c(mod b) 等式右侧的c
+                ll c = (a[i] - X % m[i] + m[i]) % m[i];//ax≡c(mod b) 等式右侧的c，并让他变成可行的最小正整数
                 if(c % gcd) return -1;
                 t = ksc(t, c / gcd, miDIVgcd); // 因为扩欧求得的是等号右侧为gcd时的x解，而此时等号右端为c，需要让X乘上c/gcd个t，此时先给t变了再说
 
