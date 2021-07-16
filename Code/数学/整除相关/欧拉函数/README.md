@@ -4,10 +4,7 @@
 https://acm.dingbacode.com/contests/contest_showproblem.php?pid=1007&cid=1019
 
 # 💡
-因为欧拉函数 phi 的作用就是求 n 以内有多少个互质数的
-而本题就是问的这个  
-所以用欧拉函数  
-因为多实例，所以筛出来打表即可
+[学习传送门](https://chivas-regal.github.io/%E6%95%B0%E5%AD%A6/2021/07/16/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%92%8C%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86.html)
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 ```cpp
