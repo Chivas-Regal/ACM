@@ -1,14 +1,10 @@
+<h1 align="center">📕【模板】扩展中国剩余定理</h1>
+
 # 🔗
 https://www.luogu.com.cn/problem/P4777
 
 # 💡
-一般性问题：一般在这n个m[i]并非两两互质</br></br>
-假设求出了前k-1个方程的解为x，我们做出 M=lcm(m[i])</br>
-此时 x+iM 依然是前k-1个方程的解，因为我们加了M的倍数，对m取模的值不变</br></br>
-同样的，我们需要加一个合理的倍数t使得其成为第k个方程的解，即 x+tM≡a[k](mod m[k])</br>
-转换一下得到：Mt≡a[k]-x(mod m[k])，我们在这里求t</br></br>
-若有解，扩欧求t，前k个方程的通解 X=x+tM</br>
-否则全式无解</br>
+[学习传送门](https://chivas-regal.github.io/%E6%95%B0%E5%AD%A6/2021/07/16/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86.html)
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 ```cpp
