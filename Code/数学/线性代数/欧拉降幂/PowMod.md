@@ -6,14 +6,14 @@ https://acm.dingbacode.com/showproblem.php?pid=5728
 <ol>
   <li>
     <b>解K</b><br>
-    由于 n 无平方因子，所以 n 唯一分解成几个质因子之后，每个质因子 p 都与别的互质<br>
-    即：<img src="https://latex.codecogs.com/svg.image?\phi(p*\frac&space;np)=\phi(p)*\phi(\frac&space;np)" title="\phi(p*\frac np)=\phi(p)*\phi(\frac np)" /><br>
-    设<img src="https://latex.codecogs.com/svg.image?\sum\limits_{n=1}^m\phi(i,n)=f(n,m)" title="\sum\limits_{n=1}^m\phi(i,n)=f(n,m)" /><br>
+    由于 n 无平方因子，所以 n 唯一分解成几个质因子之后，每个质因子 p 都与别的互质<br><br>
+    即：<br><img src="https://latex.codecogs.com/svg.image?\phi(p*\frac&space;np)=\phi(p)*\phi(\frac&space;np)" title="\phi(p*\frac np)=\phi(p)*\phi(\frac np)" /><br><br>
+    设<br><img src="https://latex.codecogs.com/svg.image?\sum\limits_{n=1}^m\phi(i,n)=f(n,m)" title="\sum\limits_{n=1}^m\phi(i,n)=f(n,m)" /><br><br>
     <img src="https://latex.codecogs.com/svg.image?\sum\limits_{n=1}^m\phi(i,n)=\phi(p)\sum\limits_{i=1}^m\phi(i,\frac&space;np)&plus;\sum\limits_{i=1}^{\frac&space;mp}\phi(i,n)" title="\sum\limits_{n=1}^m\phi(i,n)=\phi(p)\sum\limits_{i=1}^m\phi(i,\frac np)+\sum\limits_{i=1}^{\frac mp}\phi(i,n)" /><img src="https://latex.codecogs.com/svg.image?\Rightarrow&space;f(n,m)=\phi(p)*f(\frac&space;np,&space;m)&plus;f(n,&space;\frac&space;mp)" title="\Rightarrow f(n,m)=\phi(p)*f(\frac np, m)+f(n, \frac mp)" /><br>
   </li>
   <li>
     <b>递归降幂</b><br>
-    用<img src="https://latex.codecogs.com/svg.image?a^b=a^{b%\phi(n)&plus;\phi(n)}(mod\quad&space;n)" title="a^b=a^{b%\phi(n)+\phi(n)}(mod\quad n)" />递归一层层降幂<br>
+    用<br><img src="https://latex.codecogs.com/svg.image?a^b=a^{b%\phi(n)&plus;\phi(n)}(mod\quad&space;n)" title="a^b=a^{b%\phi(n)+\phi(n)}(mod\quad n)" />递归一层层降幂<br>
     递归出口是 phi = 1 <br>
   </li>
 </ol>
