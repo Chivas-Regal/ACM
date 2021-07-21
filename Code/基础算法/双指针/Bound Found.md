@@ -25,7 +25,7 @@ Author :  \________| |_|  |_| |_|  \___/  |___/|_| |_____| _________|__|   \__\ 
                                                                                          ____| |
                                                                                          \_____/
 */
-#include <unordered_map>
+//#include <unordered_map>
 #include <algorithm>
 #include <iostream>
 #include <cstring>
@@ -51,7 +51,7 @@ Author :  \________| |_|  |_| |_|  \___/  |___/|_| |_____| _________|__|   \__\ 
 #define LOWBIT(x) ((x) & (-x))
 #define LOWBD(a, x) lower_bound(a.begin(), a.end(), x) - a.begin()
 #define UPPBD(a, x) upper_bound(a.begin(), a.end(), x) - a.begin()
-#define TEST(a) cout << "---------" << a << "---------" << '\n'
+#define TEST(a) cout << "---------" << a << "---------" << '<br>'
 
 #define CHIVAS_ int main()
 #define _REGAL exit(0)
@@ -78,6 +78,7 @@ Author :  \________| |_|  |_| |_|  \___/  |___/|_| |_____| _________|__|   \__\ 
 
 using namespace std;
 
+/*
 template<typename T> inline T MAX(T a, T b){return a > b? a : b;}
 template<typename T> inline T MIN(T a, T b){return a > b? b : a;}
 template<typename T> inline void SWAP(T &a, T &b){T tp = a; a = b; b = tp;}
@@ -92,42 +93,39 @@ template<typename T>             vector<T>& operator--            (vector<T> &v)
 template<typename T>             vector<T>& operator++            (vector<T> &v){for (auto& i : v) ++i;            return  v;}
 template<typename T>             istream& operator>>(istream& is,  vector<T> &v){for (auto& i : v) is >> i;        return is;}
 template<typename T>             ostream& operator<<(ostream& os,  vector<T>  v){for (auto& i : v) os << i << ' '; return os;}
+*/
 inline int inputInt(){int X=0; bool flag=1; char ch=getchar();while(ch<'0'||ch>'9') {if(ch=='-') flag=0; ch=getchar();}while(ch>='0'&&ch<='9') {X=(X<<1)+(X<<3)+ch-'0'; ch=getchar();}if(flag) return X;return ~(X-1);}
 inline void outInt(int X){if(X<0) {putchar('-'); X=~(X-1);}int s[20],top=0;while(X) {s[++top]=X%10; X/=10;}if(!top) s[++top]=0;while(top) putchar(s[top--]+'0');}
 inline ll inputLL(){ll X=0; bool flag=1; char ch=getchar();while(ch<'0'||ch>'9') {if(ch=='-') flag=0; ch=getchar();}while(ch>='0'&&ch<='9') {X=(X<<1)+(X<<3)+ch-'0'; ch=getchar();}if(flag) return X;return ~(X-1); }
 inline void outLL(ll X){if(X<0) {putchar('-'); X=~(X-1);}ll s[20],top=0;while(X) {s[++top]=X%10; X/=10;}if(!top) s[++top]=0;while(top) putchar(s[top--]+'0');}
 
-int n;
+inline ll abss(ll x) { return x > 0ll ? x : -x; } // 对 long long 需要特殊的abs
+const int N = 100005;
+ll n, k;
+struct node { ll id, sum;  inline friend  bool  operator < (node a, node b) {return a.sum < b.sum;} } no[N];
 
-inline bool check(deque<int> da, deque<int> db, int x){
-        for(int i = n + 1; i <= x; i ++){
-                da.push_back(100); db.push_front(0);
-        }
-        int los = x / 4;
-        while(los --) da.pop_front(), db.pop_front();
-        int suma = 0, sumb = 0;
-        for(int i = 0; i < da.size(); i ++) suma += da[i], sumb += db[i];
-        return suma >= sumb;
-}
+CHIVAS_{
+        while ( scanf("%lld%lld", &n, &k) == 2 && (n || k) ) {
+                no[0] = node{0, 0};
+                for ( ll i = 1; i <= n; i ++ ) no[i] = node{ i,no[i - 1].sum + inputInt()};
+                sort(no , no + 1 + n);
+                while( k -- ) {
+                        ll x = inputLL();
+                        pair<pair<ll, ll>, ll> res = make_pair(make_pair(0, 0), INF); // {{左右端点}, 和} 
+                        ll l = 0, r = 1;
+                        while ( r <= n && abss(res.second - x) ) {
+                                ll Sum = no[r].sum - no[l].sum ;
 
-inline void solve(){
-        n = inputInt();
-        deque<int> da, db;
-        for(int i = 0; i < n; i ++) da.push_back(inputInt());
-        for(int i = 0; i < n; i ++) db.push_back(inputInt());
-        sort(ALL(da)); sort(ALL(db));
-        
-        int r = n * 10, l = n;
-        while(l <= r){
-                int mid = (l + r) >> 1;
-                if(check(da, db, mid)) r = mid - 1;
-                else l = mid + 1;
-        }cout << r - n + 1 << endl;
-}
-int main(){
-        int cass;
-        EACH_CASE(cass){
-                solve();
+                                if ( abss(Sum - x) < abss(res.second - x) ) res = make_pair(make_pair(no[l].id, no[r].id), Sum); // 维护
+                                
+                                // 小了左指针前进，大了右指针前进
+                                if ( Sum >= x ) l ++;
+                                else r ++;
+                                if ( r == l ) r ++; // 相同就右指针前进以拉开区间
+                        }
+                        printf("%lld %lld %lld\n", res.second, min(res.first.second, res.first.first) + 1, max(res.first.second, res.first.first));
+                }
         }
-}
+        _REGAL;
+};
 ```
