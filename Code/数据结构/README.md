@@ -39,11 +39,11 @@ for ( int i = 1; i <= n; i ++ ) a[i] = inputInt();
 stack<int> stk;
 //压栈
 for ( int i = 1; i <= n; i ++ ) {
-        if ( a[i] != Want ) stk.push(a[i]);
-        else Want ++;
+        while ( stk.size() && stk.top() == Want ) Want ++, stk.pop(); // 实时抛一下
+        stk.push(a[i]);
 }
 //抛栈
 while ( stk.size() && stk.top() == Want ) Want ++, stk.pop();
 
-cout << (stk.empty()? "YES" : "NO") << endl;
+outInt( 1 + (!stk.empty()) );
 ```
