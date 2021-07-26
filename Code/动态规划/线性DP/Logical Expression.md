@@ -5,15 +5,7 @@ https://vjudge.net/problem/AtCoder-abc189_d
 可以看出这是一道两套子问题互相来回交汇的方案数问题  
 由于中途中选TF是比较随意的，所以我们先列出TF的关系式：  
   
-F and F = F  
-F and T = F  
-T and F = F  
-T and T = T  
-  
-F or T = T  
-T or T = T  
-T or F = T  
-F or F = F  
+<img src="https://latex.codecogs.com/svg.image?\begin{matrix}&F\;&\And\;&F\;&=\;&F\\&F\;&\And\;&T\;&=\;&F\\&T\;&\And\;&F\;&=\;&F\\&T\;&\And\;&T\;&=\;&T\\\\&F\;&|\;&T\;&=\;&T\\&T\;&|\;&T\;&=\;&T\\&T\;&|\;&F\;&=\;&T\\&F\;&|\;&F\;&=\;&F&space;\end{matrix}&space;" title="\begin{matrix}&F\;&\And\;&F\;&=\;&F\\&F\;&\And\;&T\;&=\;&F\\&T\;&\And\;&F\;&=\;&F\\&T\;&\And\;&T\;&=\;&T\\\\&F\;&|\;&T\;&=\;&T\\&T\;&|\;&T\;&=\;&T\\&T\;&|\;&F\;&=\;&T\\&F\;&|\;&F\;&=\;&F \end{matrix} " />
   
 这两套方案即是这一位为T或F的两种状态  
 那么我们设置dpT, dpF为状态表示  
