@@ -107,7 +107,7 @@ inline void solve ( ){
         int n; cin >> n;
         int m; cin >> m;
         string s; cin >> s; s = "0" + s;
-                        for (int i = 1; i < s.size(); i ++ ) {
+                        for (int i = 1; i < s.size(); i ++ ) { // 六种排列的预处理
                                 if (i % 3 == 0){
                                         res1[i] = res1[i - 1] + (s[i] != 'a');
                                         res2[i] = res2[i - 1] + (s[i] != 'a');
@@ -133,17 +133,23 @@ inline void solve ( ){
                         }
         while ( m -- ) {
                 int l, r; cin >> l >> r;
-                if(l == r){
+                if(l == r){ // 特判
+                
                         cout << 0 << endl;
-                } else if ( r == l + 1 ) {
+                        
+                } else if ( r == l + 1 ) { // 特判
+                        
                         if ( s[r] == s[l] ) cout << 1 << endl;
                         else cout << 0 << endl;
-                } else {
+                
+                } else { // 对前缀和差分求得区间和，进行查找最小值
+                        
                         cout << MIN( 
                                 MIN(
                                 MIN(res1[r] - res1[l - 1], res2[r] - res2[l - 1]), 
                                 MIN(res3[r] - res3[l - 1], res4[r] - res4[l - 1])), 
                                 MIN(res5[r] - res5[l - 1], res6[r] - res6[l - 1]) ) << endl;
+                
                 }
         }
 }
