@@ -1,5 +1,5 @@
 # 🔗
-https://acm.dingbacode.com/contests/contest_showproblem.php?cid=1019&pid=1013
+https://acm.dingbacode.com/showproblem.php?pid=3555
 
 # 💡
 我们可以利用数位DP把不含 "49" 的统计出来  
