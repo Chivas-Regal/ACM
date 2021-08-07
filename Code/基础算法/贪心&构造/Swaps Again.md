@@ -1,5 +1,5 @@
 # 🔗
-
+https://codeforces.com/contest/1365/problem/F
 
 # 💡
 我们在交换数的时候，可以联想到魔方的小技巧：如何让别的点不变的情况下，只有一个点会变？  
