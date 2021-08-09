@@ -1,5 +1,5 @@
 # 🔗
-
+https://atcoder.jp/contests/abc198/tasks/abc198_d
 
 # 💡
 因为最多只有十个字符，所以在全排列之后有最多3628800种可能性，时间还可以  
