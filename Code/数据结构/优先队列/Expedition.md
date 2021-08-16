@@ -1,5 +1,5 @@
 # 🔗
-http://acm.hdu.edu.cn/showproblem.php?pid=4006
+<a href="http://acm.hdu.edu.cn/showproblem.php?pid=4006"><img src="https://img-blog.csdnimg.cn/59d42d3ea3c343dca44d6dfc3ad6f162.png"></a>
 
 # 💡
 插入也是很费时的，反正m之后的用不到  
