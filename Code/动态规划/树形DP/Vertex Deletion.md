@@ -16,6 +16,9 @@ dp[x][2]：存在且连了子节点
 <img src="https://latex.codecogs.com/svg.image?dp[x][1]&space;=&space;\prod&space;dp[y][0]" title="dp[x][1] = \prod dp[y][0]" />  
 2--存在且连了子节点：除了子节点都不存在以外，别的方式都可以连  
 <img src="https://latex.codecogs.com/svg.image?dp[x][2]&space;=&space;\prod(dp[y][0]&space;&plus;&space;dp[y][1]&space;&plus;&space;dp[y][2])&space;-&space;\prod&space;dp[y][0]" title="dp[x][2] = \prod(dp[y][0] + dp[y][1] + dp[y][2]) - \prod dp[y][0]" />
+  
+最后不能选存在且不连子节点的祖先，这样是一个被孤立的点，所以我们计算  
+<img src="https://latex.codecogs.com/svg.image?dp[1][0]&space;&plus;dp[1][2]" title="dp[1][0] +dp[1][2]" />
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 ```cpp
