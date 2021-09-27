@@ -29,7 +29,8 @@ namespace TreeMap {
                 edge[ ++ cnt ] = { head[from], to };
                 head[from] = cnt;
         }
-}
+} using namespace TreeMap;
+
 
 namespace TreeWeightCenter {
         int sz[N], weight[N], center;
@@ -40,8 +41,8 @@ namespace TreeWeightCenter {
                 center = 1e9;
         }
         inline void dfs ( int x, int fath ) {
-                for ( int i = TreeMap::head[x]; ~i; i = TreeMap::edge[i].nxt ) {
-                        int to = TreeMap::edge[i].to;
+                for ( int i = head[x]; ~i; i = edge[i].nxt ) {
+                        int to = edge[i].to;
                         if ( to == fath ) continue;
                         dfs ( to, x );
                         sz[x] += sz[to]; // 子树大小
@@ -50,7 +51,7 @@ namespace TreeWeightCenter {
                 weight[x] = max ( weight[x], n - sz[x] ); // 还要和另一端的子树对比一下
                 if ( weight[x] <= n / 2 ) center = min ( center, x ); // 可以作为重心
         }
-}
+} using namespace TreeWeightCenter;
 
 
 int main () {
@@ -63,10 +64,10 @@ int main () {
                 scanf("%d", &n);
                 for ( int i = 1, a, b; i < n; i ++ )
                         scanf("%d%d", &a, &b),
-                        TreeMap::add_Edge(a, b),
-                        TreeMap::add_Edge(b, a);
-                TreeWeightCenter::dfs ( 1, 1 );
-                printf("%d %d\n", TreeWeightCenter::center, TreeWeightCenter::weight[TreeWeightCenter::center]);
+                        add_Edge(a, b),
+                        add_Edge(b, a);
+                dfs ( 1, 1 );
+                printf("%d %d\n", center, weight[center]);
         }
 }
 ```
