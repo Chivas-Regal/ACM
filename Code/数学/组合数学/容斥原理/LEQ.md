@@ -3,12 +3,12 @@
 
 # 💡
 问题转化一下就是  
-从左向右，a[i]的贡献就是每个前面比它小的a[j]，在这个位置上的贡献为2^{i-j-1}  
+从左向右，<img src="https://latex.codecogs.com/svg.image?a[i]" title="a[i]" />的贡献就是每个前面比它小的<img src="https://latex.codecogs.com/svg.image?a[j]" title="a[j]" />，在这个位置上的贡献为<img src="https://latex.codecogs.com/svg.image?2^{i-j-1}" title="2^{i-j-1}" />  
 由于区间长度总是参差不齐的  
-那么对于每个a[j]，我们都可以维护一个前缀贡献为2^{-j-1}  
-然后在i的位置的时候的贡献容斥为\frac{2^i}{\sum2^{j+1})即可，其中sum可以由树状数组的前缀得到  
-所以每次累加查询a[i]位置以前的总贡献，`query(a[i]) * ksm(2, i)`  
-然后在a[i]的位置上更新一下这个前缀贡献，`update( a[i], ksm(ksm(2, i + 1), mod - 2) )`  
+那么对于每个<img src="https://latex.codecogs.com/svg.image?a[j]" title="a[j]" />，我们都可以维护一个前缀贡献为<img src="https://latex.codecogs.com/svg.image?2^{-j-1}&space;" title="2^{-j-1} " />   
+然后在<img src="https://latex.codecogs.com/svg.image?i" title="i" />的位置的时候的贡献容斥为<img src="https://latex.codecogs.com/svg.image?\sum\frac{2^i}{2^{j&plus;1}}" title="\sum\frac{2^i}{2^{j+1}}" />即可，其中sum可以由树状数组的前缀得到  
+所以每次累加查询<img src="https://latex.codecogs.com/svg.image?a[i]" title="a[i]" />位置以前的总贡献，`query(a[i]) * ksm(2, i)`  
+然后在<img src="https://latex.codecogs.com/svg.image?a[i]" title="a[i]" />的位置上更新一下这个前缀贡献，`update( a[i], ksm(ksm(2, i + 1), mod - 2) )`  
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 ```cpp
