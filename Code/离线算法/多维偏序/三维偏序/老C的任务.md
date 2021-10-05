@@ -22,11 +22,6 @@
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
 **解法1:树状数组**  
 ```cpp
-#include <bits/stdc++.h>
-#define ll long long
-
-using namespace std;
-
 const ll N = 1e5 + 10, M = 1e6 + 10;
 struct Qry { // 询问
         ll x1, y1, x2, y2;
