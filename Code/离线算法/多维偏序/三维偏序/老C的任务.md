@@ -6,13 +6,21 @@
 其实都是在(<=x, <=y)上做文章  
 但是这道题有一个特殊的地方就是要求区间  
 那么可以想到前缀和->二维前缀和  
-  
 只需要将要查的矩形的四个点也传入要排序的数组中  
-标记一下再排序（还是双关键字），如果当前遍历到的点是查询点的话就不update，而是query，查询后塞到查询的结构体中。否则update  
+并标记为id=1(查询)，id=0(插入)  
+那么就需要多出第三维（<=id）  
+但是id我们每次求得只有前面id=0的点，所以一个变量就够了
+  
+**解法1:树状数组**  
+如果当前遍历到的点是查询点的话就不update，而是query，查询后塞到查询的结构体中。否则update  
 然后对一个查询结构体内的传进的四次query进行排序，最大的就是右下角的点，中等的是左下右上，最小的是左上  
 然后用二维前缀和计算的方式进行计算即可  
+**解法2:归并排序**  
+就对查询点加一个val，在归并到时候对第二维进行排序  
+然后双指针扫描固定，中途累加即可
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
+**解法1:树状数组**  
 ```cpp
 #include <bits/stdc++.h>
 #define ll long long
@@ -83,5 +91,56 @@ int main () {
                 sort ( q[i].res, q[i].res + 4, greater<ll>() ); 
                 printf("%lld\n", q[i].res[0] - q[i].res[1] - q[i].res[2] + q[i].res[3]); // 二维区间和
         }
+}
+```
+**解法2:归并排序**
+```cpp
+const int N = 1e5 + 10, M = 5e5 + 10;
+int n, m;
+struct Data { 
+        int a, b, c;
+        int isQry, whichQry, sgn;
+        ll sum;
+}q[M], w[M];
+ll res[N];
+
+inline void merge_Sort ( int l, int r ) {
+        if ( l >= r ) return;
+        int mid = (l + r) >> 1;
+        merge_Sort (l, mid); merge_Sort (mid + 1, r);
+        int i = l, j = mid + 1, k = 0;
+        ll sum = 0;
+        while ( i <= mid && j <= r )
+                if ( q[i].b <= q[j].b ) sum += !q[i].isQry * q[i].c, w[k ++] = q[i ++];
+                else                    q[j].sum += sum,             w[k ++] = q[j ++];
+        while ( i <= mid ) sum += !q[i].isQry * q[i].c, w[k ++] = q[i ++];
+        while ( j <= r )   q[j].sum += sum,             w[k ++] = q[j ++];
+        for ( i = l, j = 0; j < k; i ++, j ++ ) q[i] = w[j];
+}
+
+int main () {
+        ios::sync_with_stdio(false);
+        cin >> n >> m;
+        for ( int i = 0; i < n; i ++ )
+                cin >> q[i].a >> q[i].b >> q[i].c;
+        int k = n;
+        for ( int i = 0; i < m; i ++ ) {
+                int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;
+                q[k ++] = {x1 - 1, y1 - 1, 0, 1, i, 1};
+                q[k ++] = {x1 - 1, y2,     0, 1, i, -1};
+                q[k ++] = {x2,     y1 - 1, 0, 1, i, -1};
+                q[k ++] = {x2,     y2,     0, 1, i, 1};
+        }
+        sort ( q, q + k, [&](Data a, Data b) {
+                if ( a.a != b.a ) return a.a < b.a;
+                if ( a.b != b.b ) return a.b < b.b;
+                return a.isQry < b.isQry;
+        });
+        merge_Sort ( 0, k - 1 );
+        for ( int i = 0; i < k; i ++ )
+                if ( q[i].isQry )
+                        res[q[i].whichQry] += q[i].sum * q[i].sgn;
+        for ( int i = 0; i < m; i ++ ) cout << res[i] << endl;
+        return 0;
 }
 ```
