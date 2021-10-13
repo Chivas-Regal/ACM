@@ -1,5 +1,5 @@
 # 🔗
-https://vjudge.net/contest/448172#problem/D
+https://acm.dingbacode.com/showproblem.php?pid=2141
 
 # 💡
 题目让找满足 a[i] + b[j] + c[k] = x    
