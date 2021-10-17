@@ -1,0 +1,91 @@
+# 🔗
+<a href="https://www.luogu.com.cn/problem/P3320"><img src="https://img-blog.csdnimg.cn/99765486d7484a738eb3c6fe5786d5b6.png"></a>
+
+# 💡
+可以观察到每一次的值都是虚树的边权和的两倍  
+但是这棵虚树我们不需要完整地造出来  
+因为我们只是求它的边权和，并没有转移  
+所以可以用STL实现点的删除和增加（这里用的是set  
+  
+预处理LCA，每一次加点其实就是计算改变的边权  
+改变的是这个插入的点和它dfs序内两个相邻虚点的距离  
+两点距离 = dist[i] + dist[j] - dist[lca] * 2  
+求相邻的两个点可以直接使用set.lower_bound-1和upper_bound实现  
+  
+最后如果虚树不为空还要加上两个哨兵之间的距离  
+（这里弄了一个大哨兵和一个小哨兵）  
+
+# <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
+```cpp
+namespace Map {
+        struct Edge {
+                int nxt, to;
+                ll val;
+        } edge[M];
+        int cnt = 0;
+        int head[M];
+        inline void add_Edge ( int from, int to, ll val ) {
+                edge [ ++ cnt ] = (Edge){ head[from], to, val };
+                head[from] = cnt;
+        } 
+} using namespace Map;
+
+namespace ProblemOnTree {
+        int dep[N], fa[N][25], mxFa[N];
+        ll  dist[N];
+        int dfn[N], dfsid = 0, nfd[N];
+        inline void dfs ( int pos, int fath ) {
+                int k;
+                for ( k = 0; fa[pos][k]; k ++ ) fa[pos][k + 1] = fa[fa[pos][k]][k];
+                mxFa[pos] = k;
+                dfn[pos] = ++dfsid, nfd[dfsid] = pos;
+                for ( int i = head[pos]; i; i = edge[i].nxt ) {
+                        int to = edge[i].to;
+                        if ( to == fath ) continue;
+                        dep[to] = dep[pos] + 1;
+                        fa[to][0] = pos;
+                        dist[to] = dist[pos] + edge[i].val;
+                         dfs ( to, pos );
+                }
+        }
+        inline int LCA ( int x, int y ) {
+                if ( dep[x] < dep[y] ) swap ( x, y );
+                for ( int i = mxFa[x]; i >= 0; i -- ) if ( dep[fa[x][i]] >= dep[y] ) x = fa[x][i];
+                if ( x == y ) return x;
+                for ( int i = mxFa[x]; i >= 0; i -- ) if ( fa[x][i] != fa[y][i] ) x = fa[x][i], y = fa[y][i];
+                return fa[x][0];
+        }
+        inline ll Dis ( int x, int y ) {
+                return dist[x] + dist[y] - dist[LCA(x, y)] * 2;
+        }
+} using namespace ProblemOnTree;
+
+int n, m; 
+ll res;
+int x, y, z;
+set<int> st;
+
+int main () {
+        scanf("%d%d", &n, &m);
+        for ( int i = 1; i < n; i ++ ) {
+                scanf("%d%d%d", &x, &y, &z);
+                add_Edge ( x, y, z );
+                add_Edge ( y, x, z );
+        }
+        dfs ( 1, 1 );
+        st.insert(-1); st.insert(99999999);
+        for ( int i = 0, x, op; i < m; i ++ ) {
+                scanf("%d", &x);
+                if ( *st.lower_bound(dfn[x]) == dfn[x] )  op = -1, st.erase(dfn[x]); 
+                else                                      op = 1,  st.insert(dfn[x]);
+                
+                int l = *--st.lower_bound(dfn[x]), r = *st.upper_bound(dfn[x]);
+
+                if ( l != -1 )                  res += Dis ( nfd[l], x ) * op;
+                if ( r != 99999999 )            res += Dis ( x, nfd[r] ) * op;
+                if ( l != -1 && r != 99999999 ) res -= Dis ( nfd[l], nfd[r] ) * op;
+
+                printf("%lld\n", res + (st.size() == 2 ? 0 : Dis(nfd[*++st.begin()], nfd[*--st.lower_bound(99999999)])) );
+        }
+}
+```
