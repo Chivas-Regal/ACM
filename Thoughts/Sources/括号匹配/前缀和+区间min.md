@@ -7,7 +7,7 @@
 那么可以记录一个**权值前缀和**  
 那么对于每一个区间，如果其中的最小值小于 <img src="https://latex.codecogs.com/svg.image?l-1" title="l-1" /> 的前缀和的话，那么就一定是不匹配的（最小值的位置前右括号太多了  
 当然如果本身 <img src="https://latex.codecogs.com/svg.image?l-1" title="l-1" /> 的前缀和不等于 <img src="https://latex.codecogs.com/svg.image?r" title="r" /> 的前缀和就也是不匹配的  
-如果还有修改，可以使用线段树进行维护区间最小值  
+如果还有修改，可以使用线段树进行维护  
 
 ## 例题
 
