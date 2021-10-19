@@ -1,4 +1,4 @@
-# 括号匹配——双STL滚动拆分  
+# 中位数——双STL滚动拆分  
 
 很多时候中位数是动态插数    
 此时我们可以维护两个STL，这里以优先队列为例  
@@ -13,8 +13,8 @@
 通过这种方式拆分整个数组可以更灵活地维护插入删除  
 
 ## 例题
-<a href="https://acm.dingbacode.com/showproblem.php?pid=7072">HDU2021多校9(7)_Boring data structure problem
-</a>  
+<a href="https://acm.dingbacode.com/showproblem.php?pid=7072">HDU2021多校9(7)_Boring data structure problem</a>  
+
 ```cpp
 const int N = 1e7 + 10;
 
