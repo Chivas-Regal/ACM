@@ -1,5 +1,5 @@
 # 🔗
-<a href="https://acm.dingbacode.com/showproblem.php?pid=7072"><img src="https://i.loli.net/2021/10/19/q7gbzUHfi8pKL6C.png"></a>
+<a href="https://acm.dingbacode.com/showproblem.php?pid=7072"> <img src="https://i.loli.net/2021/10/19/q7gbzUHfi8pKL6C.png"></a>
 
 # 💡
 左侧右侧进数求中位数很好操作，无非就是整个迭代器或者指针进行偏移罢了  
