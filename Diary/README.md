@@ -12,7 +12,6 @@ HDU2021多校(10)3_PtyLoveLines
 [题解地址](https://github.com/Chivas-Regal/ACM/blob/main/Code/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/BITSET/HDU2021%E5%A4%9A%E6%A0%A1(10)3_PtyLovesLines.md)  
 LuoguP6091 原根【模板】  
 [题目地址](https://www.luogu.com.cn/problem/P6091)  
-无题解  
 
 ## 10月21日 周四
 
