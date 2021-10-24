@@ -30,7 +30,7 @@
 我们设<img src="https://latex.codecogs.com/svg.image?a'=\frac&space;ak,\quad&space;b'=\frac&space;bk" title="a'=\frac ak,\quad b'=\frac bk" />  
 则<img src="https://latex.codecogs.com/svg.image?F(d'k)=\left&space;\lfloor&space;\frac&space;{a'}{d'}&space;\right&space;\rfloor&space;*&space;\left&space;\lfloor\frac&space;{b'}{d'}&space;&space;\right&space;\rfloor" title="F(d'k)=\left \lfloor \frac {a'}{d'} \right \rfloor * \left \lfloor\frac {b'}{d'} \right \rfloor" />  
   
-<img src="https://latex.codecogs.com/svg.image?\therefore&space;f(k)=\sum\limits_{d'=1}^{min(a,b)}\mu(d')\left&space;\lfloor&space;\frac&space;{a'}{d'}&space;\right&space;\rfloor&space;\left&space;\lfloor\frac&space;{b'}{d'}&space;&space;\right&space;\rfloor" title="\therefore f(k)=\sum\limits_{d'=1}^{min(a,b)}\mu(d')\left \lfloor \frac {a'}{d'} \right \rfloor \left \lfloor\frac {b'}{d'} \right \rfloor" />  
+<img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')\left&space;\lfloor&space;\frac&space;{a'}{d'}\right&space;\rfloor\left&space;\lfloor&space;\frac{b'}{d'}\right&space;\rfloor" title="f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')\left \lfloor \frac {a'}{d'}\right \rfloor\left \lfloor \frac{b'}{d'}\right \rfloor" />
   
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
