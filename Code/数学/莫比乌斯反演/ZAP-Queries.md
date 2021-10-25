@@ -22,12 +22,12 @@
 <img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{k|d}\mu(\frac&space;dk)F(d)" title="f(k)=\sum\limits_{k|d}\mu(\frac dk)F(d)" />  
   
 我们枚举k的倍数，所以设<img src="https://latex.codecogs.com/svg.image?d'=\frac&space;dk,\quad&space;d=d'k" title="d'=\frac dk,\quad d=d'k" />，枚举<img src="https://latex.codecogs.com/svg.image?d'" title="d'" />  
+并设<img src="https://latex.codecogs.com/svg.image?a'=\left&space;\lfloor&space;\frac&space;ak\right&space;\rfloor,b'=\left&space;\lfloor&space;\frac&space;bk\right&space;\rfloor" title="a'=\left \lfloor \frac ak\right \rfloor,b'=\left \lfloor \frac bk\right \rfloor" />  
   
-则<img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{d'=1}^{min(a,b)}\mu(d')F(d'k)" title="f(k)=\sum\limits_{d'=1}^{min(a,b)}\mu(d')F(d'k)" />  
+则<img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')F(d'k)" title="f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')F(d'k)" />   
   
 <img src="https://latex.codecogs.com/svg.image?\because&space;F(d'k)=&space;\left&space;\lfloor&space;\frac&space;a{d'k}&space;\right&space;\rfloor&space;*&space;\left&space;\lfloor\frac&space;b{d'k}&space;&space;\right&space;\rfloor" title="\because F(d'k)= \left \lfloor \frac a{d'k} \right \rfloor * \left \lfloor\frac b{d'k} \right \rfloor" />  
-  
-我们设<img src="https://latex.codecogs.com/svg.image?a'=\frac&space;ak,\quad&space;b'=\frac&space;bk" title="a'=\frac ak,\quad b'=\frac bk" />  
+   
 则<img src="https://latex.codecogs.com/svg.image?F(d'k)=\left&space;\lfloor&space;\frac&space;{a'}{d'}&space;\right&space;\rfloor&space;*&space;\left&space;\lfloor\frac&space;{b'}{d'}&space;&space;\right&space;\rfloor" title="F(d'k)=\left \lfloor \frac {a'}{d'} \right \rfloor * \left \lfloor\frac {b'}{d'} \right \rfloor" />  
   
 <img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')\left&space;\lfloor&space;\frac&space;{a'}{d'}\right&space;\rfloor\left&space;\lfloor&space;\frac{b'}{d'}\right&space;\rfloor" title="f(k)=\sum\limits_{d'=1}^{min(a',b')}\mu(d')\left \lfloor \frac {a'}{d'}\right \rfloor\left \lfloor \frac{b'}{d'}\right \rfloor" />
