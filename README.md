@@ -1,4 +1,4 @@
-<h1 align="center"> 🎈This is Chivas_Regal's ACM practice </h1>
+<h1 align="center"> 🎈This is Chivas_Regal's ACM Practices </h1>
 <p align="center"> U can get some answer if U can't solve some problems 😄 </p>
 
 - [How To Read](#how-to-read)
