@@ -5,7 +5,7 @@
 ~~依稀记得好像做过类似的题来着~~  
 我们每次遇到一个字母  <img src="https://latex.codecogs.com/svg.image?\inline&space;c" title="\inline c" />   
 在所给序列  <img src="https://latex.codecogs.com/svg.image?\inline&space;c" title="\inline c" />  出现的位置假设为  <img src="https://latex.codecogs.com/svg.image?\inline&space;i" title="\inline i" />  
-因为当这个字母出现之后，比它小一位也就是  <img src="https://latex.codecogs.com/svg.image?\inline&space;i-1" title="\inline i-1" /> 位多了一个渠道推向第  <img src="https://latex.codecogs.com/svg.image?\inline&space;i" title="\inline i" /> 位，所以：
+因为当这个字母出现之后，比它小一位也就是  <img src="https://latex.codecogs.com/svg.image?\inline&space;i-1" title="\inline i-1" /> 位多了一个渠道推向第  <img src="https://latex.codecogs.com/svg.image?\inline&space;i" title="\inline i" /> 位，那么：  
 如果  <img src="https://latex.codecogs.com/svg.image?\inline&space;i\neq1" title="\inline i\neq1" />  那么  <img src="https://latex.codecogs.com/svg.image?\inline&space;dp[i]+=dp[i-1]" title="\inline dp[i]+=dp[i-1]" />   
 而当  <img src="https://latex.codecogs.com/svg.image?\inline&space;i=1" title="\inline i=1" /> 时，我们只是做到让推的源头  <img src="https://latex.codecogs.com/svg.image?\inline&space;+1" title="\inline +1" /> 而已，那么：  
 如果  <img src="https://latex.codecogs.com/svg.image?\inline&space;i=1" title="\inline i=1" /> 那么  <img src="https://latex.codecogs.com/svg.image?\inline&space;dp[i]++" title="\inline dp[i]++" />   
