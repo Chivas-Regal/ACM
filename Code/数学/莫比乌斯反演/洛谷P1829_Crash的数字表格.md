@@ -16,7 +16,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?i',j'" title="i',j'" /> 枚举 <img src="https://latex.codecogs.com/svg.image?k" title="k" /> 倍数， <img src="https://latex.codecogs.com/svg.image?n'=\left\lfloor\frac&space;nk\right\rfloor,\;m'=\left\lfloor\frac&space;mk\right\rfloor,\;i'=\frac&space;ik,\;j'=\frac&space;jk,\;i=i'k,\;j=j'k" title="n'=\left\lfloor\frac nk\right\rfloor,\;m'=\left\lfloor\frac mk\right\rfloor,\;i'=\frac ik,\;j'=\frac jk,\;i=i'k,\;j=j'k" />
 
-<img src="https://latex.codecogs.com/svg.image?F(k)=\sum\limits_{i'=1}^{n'}\sum\limits_{j'=1}^{m'}i'kj'k=k^2\frac{n'(1&plus;n')}2\frac{m'(1&plus;m')}2=k^2\frac{k^2n'(1&plus;n')m'(1&plus;m')}4" title="F(k)=\sum\limits_{i'=1}^{n'}\sum\limits_{j'=1}^{m'}i'kj'k=k^2\frac{n'(1+n')}2\frac{m'(1+m')}2=k^2\frac{k^2n'(1+n')m'(1+m')}4" /> 
+<img src="https://latex.codecogs.com/svg.image?F(k)=\sum\limits_{i'=1}^{n'}\sum\limits_{j'=1}^{m'}i'kj'k=k^2\frac{n'(1&plus;n')}2\frac{m'(1&plus;m')}2=\frac{k^2n'(1&plus;n')m'(1&plus;m')}4" title="F(k)=\sum\limits_{i'=1}^{n'}\sum\limits_{j'=1}^{m'}i'kj'k=k^2\frac{n'(1+n')}2\frac{m'(1+m')}2=\frac{k^2n'(1+n')m'(1+m')}4" /> 
 
 <img src="https://latex.codecogs.com/svg.image?f(k)=\sum\limits_{k\mid&space;d}\mu(\frac&space;dk)F(d)" title="f(k)=\sum\limits_{k\mid d}\mu(\frac dk)F(d)" />
 
