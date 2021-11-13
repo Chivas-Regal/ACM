@@ -21,11 +21,6 @@
 ```cpp
 const int N = 4e5 + 10;
 int res[N];
-int id[N];
-int has[N];
-int use[N];
-int stt;
-
 struct Edge {
         int nxt, to;
 } edge[N];
