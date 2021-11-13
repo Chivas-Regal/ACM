@@ -1,5 +1,5 @@
 # 🔗
-<a href="https://codeforces.com/contest/1605/problem/D"><img src="https://i.loli.net/2021/11/13/D9tby27E4Nheq51.png"></a>
+<a href="https://codeforces.com/contest/1605/problem/D"><img src="https://i.loli.net/2021/11/13/LgVPJUDRoGFruC9.png"></a>
 
 # 💡
 由于Eikooc只决定这个点放哪，但是先走的是Sushi  
