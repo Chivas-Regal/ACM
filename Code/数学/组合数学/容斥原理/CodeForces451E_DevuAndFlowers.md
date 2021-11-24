@@ -18,6 +18,8 @@
 那么我们如果直接强制在<img src="https://latex.codecogs.com/svg.image?\inline&space;i" title="\inline i" />号箱子取  <img src="https://latex.codecogs.com/svg.image?\inline&space;x_i+1" title="\inline x_i+1" />  朵花，那么别的所有取法都不合法  
 这就是容斥的问题了，因为枚举会出现重复  
 所以就（奇数个箱子）-（偶数个箱子）  
+  
+由于一开始给出的 <img src="https://latex.codecogs.com/svg.image?\inline&space;s" title="\line s" /> 可能很大，所以这里需要用 <img src="https://latex.codecogs.com/svg.image?\inline&space;Lucas" title="\line Lucas" /> 定理
 
 
 # <img src="https://img-blog.csdnimg.cn/20210713144601841.png" >
