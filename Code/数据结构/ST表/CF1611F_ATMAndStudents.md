@@ -4,11 +4,11 @@
 # 💡
 看到这个题首先会想一段区间会被前缀影响也会被后缀影响，那么我们可以采用区间求解的形式  
   
-由于收益的累加是从前往后的，所以我们建立一个前缀和 $\{sum\}$ 表示从 $1$ 到 $i$ 这一段的总收益为 $sum[i]$   
-如果我们选 $[l,r]$ 这一段，因为不看前面的收益了，所以从 $l$ 到 $x$ 的准确收益会是 $sum[x] - sum[l - 1]$  
-而这一段能否被选择的关键在于**这一段准确收益的最小值是否低于 $s$**  
+由于收益的累加是从前往后的，所以我们建立一个前缀和  <img src="https://latex.codecogs.com/svg.image?\inline&space;\{sum\}" title="\inline \{sum\}" />  表示从  <img src="https://latex.codecogs.com/svg.image?\inline&space;1" title="\inline 1" />  到  <img src="https://latex.codecogs.com/svg.image?\inline&space;i" title="\inline i" />  这一段的总收益为  <img src="https://latex.codecogs.com/svg.image?\inline&space;sum[i]" title="\inline sum[i]" />    
+如果我们选  <img src="https://latex.codecogs.com/svg.image?\inline&space;[l,r]" title="\inline [l,r]" />  这一段，因为不看前面的收益了，所以从  <img src="https://latex.codecogs.com/svg.image?\inline&space;l" title="\inline l" />  到  <img src="https://latex.codecogs.com/svg.image?\inline&space;x" title="\inline x" />  的准确收益会是  <img src="https://latex.codecogs.com/svg.image?\inline&space;sum[x]-sum[l-1]" title="\inline sum[x] - sum[l - 1]" />   
+而这一段能否被选择的关键在于**这一段准确收益的最小值是否低于<img src="https://latex.codecogs.com/svg.image?\inline&space;s" title="\inline s" />**  
   
-好了，$\{sum\}$ 的**区间最小值**，可以开一个 $ST$ 表  
+好了， <img src="https://latex.codecogs.com/svg.image?\inline&space;\{sum\}" title="\inline \{sum\}" />  的**区间最小值**，可以开一个  <img src="https://latex.codecogs.com/svg.image?\inline&space;ST" title="\inline ST" />  表  
 
 ```cpp
 for ( int i = 1; i <= n; i ++ ) st[i][0] = sum[i];
