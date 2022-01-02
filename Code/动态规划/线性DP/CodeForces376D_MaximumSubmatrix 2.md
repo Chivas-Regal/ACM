@@ -1,6 +1,9 @@
 # 🔗
 https://codeforces.com/contest/376/problem/D
 
+<details>
+  <summary align="center">查看题解</summary>
+           
 # 💡
 本题使用了DP悬线法  
 即：我们求出每个点的向上最长延伸距离 x 、向左最长延伸距离 y ，从上向下缩个 y ，然后枚举点维护 x * y 的最大值即可求得最大条件矩阵面积  
