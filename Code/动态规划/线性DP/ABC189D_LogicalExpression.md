@@ -1,9 +1,6 @@
 # 🔗
 https://vjudge.net/problem/AtCoder-abc189_d
 
-<details>
-  <summary align="center">查看题解</summary>
-           
 # 💡
 可以看出这是一道两套子问题互相来回交汇的方案数问题  
 由于中途中选TF是比较随意的，所以我们先列出TF的关系式：  
