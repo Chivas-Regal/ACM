@@ -1,9 +1,6 @@
 # 🔗
 <a href="https://www.acwing.com/problem/content/3502/"><img src="https://img-blog.csdnimg.cn/20210618154623284.png"></a>
 
-<details>
-  <summary align="center">查看题解</summary>
-           
 # 💡
 是一个决策某个位置删不删的问题，所以DP可解  
 我第一反应是区间DP，但是我们需要一维去记录删掉多少个元素  
