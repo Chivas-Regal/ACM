@@ -1,6 +1,9 @@
 # 🔗
 <a href="https://codeforces.com/gym/102800/attachments"><img src="https://i.loli.net/2021/11/11/wdMOylHJ54xEeXm.png"></a>
 
+<details>
+  <summary align="center">查看题解</summary>
+           
 # 💡
 ~~依稀记得好像做过类似的题来着~~  
 我们每次遇到一个字母  <img src="https://latex.codecogs.com/svg.image?\inline&space;c" title="\inline c" />   
