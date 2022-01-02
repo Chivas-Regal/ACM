@@ -1,8 +1,6 @@
 # 🔗
 https://acm.dingbacode.com/showproblem.php?pid=3555
 
-<details>
-  <summary align="center">查看题解</summary>
            
 # 💡
 我们可以利用数位DP把不含 "49" 的统计出来  
