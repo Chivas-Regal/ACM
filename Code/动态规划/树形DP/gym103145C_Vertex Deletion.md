@@ -1,6 +1,9 @@
 # 🔗
 <a href="https://codeforces.com/gym/103145/problem/C"><img src="https://i.loli.net/2021/09/06/X7mSDUEoxi8vnVp.png"></a>
 
+<details>
+  <summary align="center">查看题解</summary>
+           
 # 💡
 一个树形dp的比较经典的模型  
 由于本题设计两个点存在问题：存在、存在且与另一个存在相连  
