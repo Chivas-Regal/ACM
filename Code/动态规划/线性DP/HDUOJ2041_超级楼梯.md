@@ -1,9 +1,6 @@
 # 🔗
 http://acm.hdu.edu.cn/showproblem.php?pid=2041
 
-<details>
-  <summary align="center">查看题解</summary>
-           
 # 💡
 递推的思想  
 每一个台阶都可以由前一个与前两个得来  
