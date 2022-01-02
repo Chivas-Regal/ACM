@@ -1,6 +1,9 @@
 # 🔗
 https://acm.hdu.edu.cn/showproblem.php?pid=2412
 
+<details>
+  <summary align="center">查看题解</summary>
+           
 # 💡
 选了上司就不能选员工了  
 所以我们设dp[i][0]表示不选根节点i时的最大选数，dp[i][1]表示选根节点i时的最大选数  
