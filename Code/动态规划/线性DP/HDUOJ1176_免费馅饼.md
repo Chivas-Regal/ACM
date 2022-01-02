@@ -1,9 +1,7 @@
 # 🔗
 https://acm.hdu.edu.cn/showproblem.php?pid=1176
 
-<details>
-  <summary align="center">查看题解</summary>
-           
+    
 # 💡
 可以看作是一个倒着的数塔，每个点连接三条边  
 其中高度就是它给的时间，毕竟时间越长离地面越远  
