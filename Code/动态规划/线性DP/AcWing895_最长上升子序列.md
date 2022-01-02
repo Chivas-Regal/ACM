@@ -1,9 +1,7 @@
 # 🔗
 <a href="https://www.acwing.com/problem/content/897/"><img src="https://img-blog.csdnimg.cn/20210617171842630.png"></a>
 
-<details>
-  <summary align="center">查看题解</summary>
-           
+     
 # 💡
 数据量1000，可以用n^2的复杂度去解  
 在上升子序列中，考虑每一位都必须比前面那一位要大  
