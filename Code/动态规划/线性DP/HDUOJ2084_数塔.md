@@ -1,9 +1,6 @@
 # 🔗
 http://acm.hdu.edu.cn/showproblem.php?pid=2084
 
-<details>
-  <summary align="center">查看题解</summary>
-           
 # 💡
 重在决策处理与遍历顺序  
 因为我们要收集最高点的最大值  
