@@ -30,7 +30,7 @@ inline void Solve () {
         node l = nd[0], r = nd[0]; // 左段，右段
         node allin = nd[0]; // 单段
         for ( ll i = 0; i < n; i ++ ) {
-                ll res = 0;
+        
                 if ( nd[i].b > r.b ) r = nd[i]; 
                 else if ( nd[i].b == r.b && nd[i].v < r.v ) r = nd[i]; 
 
