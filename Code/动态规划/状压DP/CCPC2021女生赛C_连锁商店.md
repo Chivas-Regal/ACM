@@ -66,7 +66,7 @@ int main () {
                                 int to = edge[i].to;
                                 if ( one[to] ) dp[s][to] = max(dp[s][to], dp[s][x] + w[c[to]]);
                                 else if ( !(s & (1 << (id[c[to]]) ) ) ) dp[s | (1 << id[c[to]])][to] = max(dp[s | (1 << id[c[to]])][to], dp[s][x] + w[c[to]]); 
-                                else dp[s][to] = max(dp[s][to], dp[s][x]);
+                                else dp[s][to] = max(dp[s][to], dp[s][x]); // 由于可能断步，所以可以尝试继承一下
                         }
                 }
         }
